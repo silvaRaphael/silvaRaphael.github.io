@@ -1,0 +1,65 @@
+{
+  "fulano": {
+    "nome": "Fulano de Tal",
+    "descricao": "Lorem ipsum dolor sit amet...",
+    "perfilImagem": "https://picsum.photos/300",
+    "logo": "https://picsum.photos/300/200",
+    "email": "email@email.com",
+    "telefone": "5511932325590",
+    "whatsapp": "5511932325590",
+    "instagram": "https://instagram.com/fulano.tal",
+    "linkedin": "https://linkedin.com.br/fulanodetal",
+    "facebook": "https://facebook.com/fulanodetal",
+    "preferencias": {
+      "backgroundColor": "#0b0b0b",
+      "textColor": "#ffffff",
+      "buttons": {
+        "shape": "circle",
+        "type": "fill"
+      },
+      "perfilImagem": "circle"
+    }
+  },
+  "beltrano": {
+    "nome": "Beltrano de Tal",
+    "descricao": "Lorem ipsum dolor sit amet...",
+    "perfilImagem": "https://picsum.photos/300",
+    "logo": "https://picsum.photos/300/200",
+    "email": "email@email.com",
+    "telefone": "5511932325590",
+    "whatsapp": "5511932325590",
+    "instagram": "https://instagram.com/beltrano.tal",
+    "linkedin": "https://linkedin.com.br/beltranodetal",
+    "facebook": "https://facebook.com/beltranodetal",
+    "preferencias": {
+      "backgroundColor": "#ffff00",
+      "textColor": "#000000",
+      "buttons": {
+        "shape": "square",
+        "type": "outline"
+      },
+      "perfilImagem": "rounded"
+    }
+  },
+  "ciclano": {
+    "nome": "Ciclano de Tal",
+    "descricao": "Lorem ipsum dolor sit amet...",
+    "perfilImagem": "https://picsum.photos/300",
+    "logo": "https://picsum.photos/300/200",
+    "email": "email@email.com",
+    "telefone": "5511932325590",
+    "whatsapp": "5511932325590",
+    "instagram": "https://instagram.com/ciclano.tal",
+    "linkedin": "https://linkedin.com.br/ciclanodetal",
+    "facebook": "https://facebook.com/ciclanodetal",
+    "preferencias": {
+      "backgroundColor": "#0000ff",
+      "textColor": "#ffffff",
+      "buttons": {
+        "shape": "square",
+        "type": "transparent"
+      },
+      "perfilImagem": "circle"
+    }
+  }
+}
