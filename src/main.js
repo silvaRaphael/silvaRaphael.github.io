@@ -42,7 +42,7 @@ function Home() {
               fontWeight: '500',
               fontSize: Sizes.title
             },
-            child: data?.telefone,
+            child: data?.nome,
           }),
           Text({
             style: {
