@@ -1,6 +1,7 @@
 {
   "fulano": {
     "nome": "Fulano de Tal",
+    "senha": "123456",
     "descricao": "Lorem ipsum dolor sit amet...",
     "perfilImagem": "https://picsum.photos/300",
     "logo": "https://picsum.photos/300/200",
@@ -22,6 +23,7 @@
   },
   "beltrano": {
     "nome": "Beltrano de Tal",
+    "senha": "123456",
     "descricao": "Lorem ipsum dolor sit amet...",
     "perfilImagem": "https://picsum.photos/300",
     "logo": "https://picsum.photos/300/200",
@@ -43,6 +45,7 @@
   },
   "ciclano": {
     "nome": "Ciclano de Tal",
+    "senha": "123456",
     "descricao": "Lorem ipsum dolor sit amet...",
     "perfilImagem": "https://picsum.photos/300",
     "logo": "https://picsum.photos/300/200",

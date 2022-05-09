@@ -237,23 +237,24 @@ function Editar() {
     .then(response => response.json())
     .then(response => {
       setData(response[location.hash.split('#')[1]])
-      setNome(response[location.hash.split('#')[1]]?.nome)
-      setEmail(response[location.hash.split('#')[1]]?.email)
-      setTelefone(response[location.hash.split('#')[1]]?.telefone)
-      setWhatsapp(response[location.hash.split('#')[1]]?.whatsapp)
-      setFacebook(response[location.hash.split('#')[1]]?.facebook)
-      setLinkedin(response[location.hash.split('#')[1]]?.linkedin)
-      setInstagram(response[location.hash.split('#')[1]]?.instagram)
-      setDescricao(response[location.hash.split('#')[1]]?.descricao)
-      setBackgroundColor(response[location.hash.split('#')[1]]?.preferencias?.backgroundColor)
-      setTextColor(response[location.hash.split('#')[1]]?.preferencias?.textColor)
-      setPerfilImagem(response[location.hash.split('#')[1]]?.preferencias?.perfilImagem)
-      setButtonShape(response[location.hash.split('#')[1]]?.preferencias?.buttons?.shape)
-      setButtonsType(response[location.hash.split('#')[1]]?.preferencias?.buttons?.type)
     })
   }, [])
 
   function saveData() {
+    const newData = data
+    newData.nome = getElement('#nome').value
+    newData.email = getElement('#email').value
+    newData.telefone = getElement('#telefone').value
+    newData.whatsapp = getElement('#whatsapp').value
+    newData.facebook = getElement('#facebook').value
+    newData.linkedin = getElement('#linkedin').value
+    newData.instagram = getElement('#instagram').value
+    newData.descricao = getElement('#descricao').value
+    newData.backgroundColor = getElement('#backgroundColor').value
+    newData.textColor = getElement('#textColor').value
+    newData.perfilImagem = getElement('#perfilImagem').value
+    newData.buttonsShape = getElement('#buttonsShape').value
+    newData.buttonsType = getElement('#buttonsType').value
     alert('Informações salvas com sucesso!')
   }
 
@@ -285,19 +286,14 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setNome(target.value)
-                },
-                child: TextInput({
-                  id: "nome",
-                  placeHolder: "Nome",
-                  value: nome,
-                  style: {
-                    padding: "8px",
-                    fontSize: "16px",
-                  }
-                })
+              TextInput({
+                id: "nome",
+                placeHolder: "Nome",
+                value : data?.nome,
+                style: {
+                  padding: "8px",
+                  fontSize: "16px",
+                }
               })
             ]
           }),
@@ -314,19 +310,14 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setEmail(target.value)
-                },
-                child: TextInput({
-                  id: "email",
-                  placeHolder: "E-mail",
-                  value: email,
-                  style: {
-                    padding: "8px",
-                    fontSize: "16px",
-                  }
-                })
+              TextInput({
+                id: "email",
+                placeHolder: "E-mail",
+                value : data?.email,
+                style: {
+                  padding: "8px",
+                  fontSize: "16px",
+                }
               })
             ]
           }),
@@ -343,19 +334,14 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setTelefone(target.value)
-                },
-                child: TextInput({
-                  id: "telefone",
-                  placeHolder: "Telefone",
-                  value: telefone,
-                  style: {
-                    padding: "8px",
-                    fontSize: "16px",
-                  }
-                })
+              TextInput({
+                id: "telefone",
+                placeHolder: "Telefone",
+                value : data?.telefone,
+                style: {
+                  padding: "8px",
+                  fontSize: "16px",
+                }
               })
             ]
           }),
@@ -372,19 +358,14 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setWhatsapp(target.value)
-                },
-                child: TextInput({
-                  id: "whatsapp",
-                  placeHolder: "Whatsapp",
-                  value: whatsapp,
-                  style: {
-                    padding: "8px",
-                    fontSize: "16px",
-                  }
-                })
+              TextInput({
+                id: "whatsapp",
+                placeHolder: "Whatsapp",
+                value : data?.whatsapp,
+                style: {
+                  padding: "8px",
+                  fontSize: "16px",
+                }
               })
             ]
           }),
@@ -401,19 +382,14 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setInstagram(target.value)
-                },
-                child: TextInput({
-                  id: "instagram",
-                  placeHolder: "Instagram",
-                  value: instagram,
-                  style: {
-                    padding: "8px",
-                    fontSize: "16px",
-                  }
-                })
+              TextInput({
+                id: "instagram",
+                placeHolder: "Instagram",
+                value : data?.instagram,
+                style: {
+                  padding: "8px",
+                  fontSize: "16px",
+                }
               })
             ]
           }),
@@ -430,19 +406,14 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setLinkedin(target.value)
-                },
-                child: TextInput({
-                  id: "linkedin",
-                  placeHolder: "LinkedIn",
-                  value: linkedin,
-                  style: {
-                    padding: "8px",
-                    fontSize: "16px",
-                  }
-                })
+              TextInput({
+                id: "linkedin",
+                placeHolder: "LinkedIn",
+                value : data?.linkedin,
+                style: {
+                  padding: "8px",
+                  fontSize: "16px",
+                }
               })
             ]
           }),
@@ -459,19 +430,14 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setFacebook(target.value)
-                },
-                child: TextInput({
-                  id: "facebook",
-                  placeHolder: "Facebook",
-                  value: facebook,
-                  style: {
-                    padding: "8px",
-                    fontSize: "16px",
-                  }
-                })
+              TextInput({
+                id: "facebook",
+                placeHolder: "Facebook",
+                value : data?.facebook,
+                style: {
+                  padding: "8px",
+                  fontSize: "16px",
+                }
               })
             ]
           }),
@@ -488,21 +454,16 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setDescricao(target.value)
-                },
-                child: TextInput({
-                  type: "textarea",
-                  rows: 3,
-                  id: "descricao",
-                  placeHolder: "Descrição",
-                  value: descricao,
-                  style: {
-                    padding: "8px",
-                    fontSize: "16px",
-                  }
-                })
+              TextInput({
+                type: "textarea",
+                rows: 3,
+                id: "descricao",
+                placeHolder: "Descrição",
+                value : data?.descricao,
+                style: {
+                  padding: "8px",
+                  fontSize: "16px",
+                }
               })
             ]
           }),
@@ -519,18 +480,13 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setBackgroundColor(target.value)
-                },
-                child: TextInput({
-                  type: "color",
-                  id: "backgroundColor",
-                  value: backgroundColor,
-                  style: {
-                    height: "32px"
-                  }
-                })
+              TextInput({
+                type: "color",
+                id: "backgroundColor",
+                value : data?.preferencias?.backgroundColor,
+                style: {
+                  height: "32px"
+                }
               })
             ]
           }),
@@ -547,18 +503,13 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setTextColor(target.value)
-                },
-                child: TextInput({
-                  type: "color",
-                  id: "textColor",
-                  value: textColor,
-                  style: {
-                    height: "32px"
-                  }
-                })
+              TextInput({
+                type: "color",
+                id: "textColor",
+                value : data?.preferencias?.textColor,
+                style: {
+                  height: "32px"
+                }
               })
             ]
           }),
@@ -575,29 +526,24 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setPerfilImagem(target.value)
-                },
-                child: Select({
-                  children: [
-                    Option({
-                      child: "Quadrada",
-                      value: "square",
-                      selected: perfilImagem == "square"
-                    }),
-                    Option({
-                      child: "Arredondada",
-                      value: "rounded",
-                      selected: perfilImagem == "rounded"
-                    }),
-                    Option({
-                      child: "Redonda",
-                      value: "circle",
-                      selected: perfilImagem == "circle"
-                    }),
-                  ]
-                })
+              Select({
+                id: 'perfilImagem',
+                children: [
+                  Option({
+                    child: "Quadrada",
+                    value: "square",
+                    selected: data?.preferencias?.perfilImagem == "square"
+                  }),
+                  Option({
+                    child: "Arredondada",
+                    selected: data?.preferencias?.perfilImagem == "rounded"
+                  }),
+                  Option({
+                    child: "Redonda",
+                    value: "circle",
+                    selected: data?.preferencias?.perfilImagem == "circle"
+                  }),
+                ]
               })
             ]
           }),
@@ -614,29 +560,24 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setButtonShape(target.value)
-                },
-                child: Select({
-                  children: [
-                    Option({
-                      child: "Quadrado",
-                      value: "square",
-                      selected: buttonsShape == "square"
-                    }),
-                    Option({
-                      child: "Arredondado",
-                      value: "rounded",
-                      selected: buttonsShape == "rounded"
-                    }),
-                    Option({
-                      child: "Redondo",
-                      value: "circle",
-                      selected: buttonsShape == "circle"
-                    }),
-                  ]
-                })
+              Select({
+                id: "buttonsShape",
+                children: [
+                  Option({
+                    child: "Quadrado",
+                    value: "square",
+                    selected: data?.preferencias?.buttons?.shape == "square"
+                  }),
+                  Option({
+                    child: "Arredondado",
+                    selected: data?.preferencias?.buttons?.shape == "rounded"
+                  }),
+                  Option({
+                    child: "Redondo",
+                    value: "circle",
+                    selected: data?.preferencias?.buttons?.shape == "circle"
+                  }),
+                ]
               })
             ]
           }),
@@ -653,29 +594,24 @@ function Editar() {
                   marginBottom: "4px",
                 }
               }),
-              GestureDetector({
-                onChange: ({target}) => {
-                  setButtonsType(target.value)
-                },
-                child: Select({
-                  children: [
-                    Option({
-                      child: "Preenchido",
-                      value: "fill",
-                      selected: buttonsType == "fill"
-                    }),
-                    Option({
-                      child: "Borda",
-                      value: "outline",
-                      selected: buttonsType == "outline"
-                    }),
-                    Option({
-                      child: "Transparente",
-                      value: "transparent",
-                      selected: buttonsType == "transparent"
-                    }),
-                  ]
-                })
+              Select({
+                id: "buttonsType",
+                children: [
+                  Option({
+                    child: "Preenchido",
+                    value: "fill",
+                    selected: data?.preferencias?.buttons?.type == "fill"
+                  }),
+                  Option({
+                    child: "Borda",
+                    selected: data?.preferencias?.buttons?.type == "outline"
+                  }),
+                  Option({
+                    child: "Transparente",
+                    value: "transparent",
+                    selected: data?.preferencias?.buttons?.type == "transparent"
+                  }),
+                ]
               })
             ]
           }),
@@ -690,6 +626,95 @@ function Editar() {
                 onClick: () => saveData(),
                 child: Button({
                   child: "Salvar",
+                  style: {
+                    padding: "8px",
+                    fontSize: "16px",
+                  }
+                })
+              })
+            ]
+          }),
+        ]
+      })
+    })
+  })
+}
+
+function Login() {
+
+  const [ data, setData ] = State(null, Login)
+  const [ nome, setNome ] = State(null, Login)
+  const [ senha, setSenha ] = State(null, Login)
+
+  Effect(() => {
+    fetch('/src/data.json')
+    .then(response => response.json())
+    .then(response => {
+      setData(response[location.hash.split('#')[1]])
+    })
+  }, [])
+
+  function login() {
+    if(getElement('#senha').value == data?.senha) {
+      sessionStorage.setItem('logged', true)
+      location.reload()
+    } else {
+      setSenha("");
+      alert('Algo deu errado! Tente novamente!')
+    }
+  }
+  
+  return Statefull({
+    key: Login,
+    child: Center({
+      child: Column({
+        style: {
+          width: "100%",
+          padding: "20px",
+        },
+        children: [
+          Text({
+            child: "Login " + data?.nome,
+            style: {
+              marginBottom: "30px",
+            }
+          }),
+          Column({
+            style: {
+              alignItems: "start",
+              width: "100%",
+              marginBottom: "10px",
+            },
+            children: [
+              Text({
+                child: "Senha",
+                style: {
+                  marginBottom: "4px",
+                }
+              }),
+              TextInput({
+                type: "password",
+                id: "senha",
+                placeHolder: "Senha",
+                value: senha,
+                style: {
+                  padding: "8px",
+                  fontSize: "16px",
+                }
+              })
+            ]
+          }),
+          Column({
+            style: {
+              alignItems: "start",
+              width: "100%",
+              marginBottom: "10px",
+            },
+            children: [
+              GestureDetector({
+                onClick: () => login(),
+                child: Button({
+                  child: "Entrar",
                   style: {
                     padding: "8px",
                     fontSize: "16px",
@@ -732,11 +757,15 @@ function Error() {
 
 export default function AppRoutes() {
 
+  const logged = sessionStorage.getItem('logged')
+  window.onpopstate = () => sessionStorage.setItem('logged', false)
+
   return (
     Router({
       routes: [
         {
-          component: location.hash.split('#')[2] == "editar" ? Editar() : Home(),
+          component: location.hash.split('#')[2] == "editar" ?
+          logged == 'true' ? Editar() : Login() : Home(),
           path: '/'
         },
         {
