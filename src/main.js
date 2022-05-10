@@ -3,6 +3,7 @@ import { Router, RouterLink } from "../assets/modules/Router.js";
 import { Center, Column, Text, Statefull, Image, Link, Icon, Row, TextInput, GestureDetector, Button, Select, Option,  } from "../assets/modules/index.js";
 import { Colors, Fonts, Sizes } from "../config/config.js";
 
+
 function Home() {
 
   const [ data, setData ] = State(null, Home)
@@ -258,6 +259,13 @@ function Editar() {
     alert('Informações salvas com sucesso!')
   }
 
+  const styles = {
+    input: {
+      padding: "8px",
+      fontSize: "16px",
+    }
+  }
+
   return Statefull({
     key: Editar,
     child: Center({
@@ -290,10 +298,7 @@ function Editar() {
                 id: "nome",
                 placeHolder: "Nome",
                 value : data?.nome,
-                style: {
-                  padding: "8px",
-                  fontSize: "16px",
-                }
+                style: styles.input,
               })
             ]
           }),
@@ -314,10 +319,7 @@ function Editar() {
                 id: "email",
                 placeHolder: "E-mail",
                 value : data?.email,
-                style: {
-                  padding: "8px",
-                  fontSize: "16px",
-                }
+                style: styles.input,
               })
             ]
           }),
@@ -338,10 +340,7 @@ function Editar() {
                 id: "telefone",
                 placeHolder: "Telefone",
                 value : data?.telefone,
-                style: {
-                  padding: "8px",
-                  fontSize: "16px",
-                }
+                style: styles.input,
               })
             ]
           }),
@@ -362,10 +361,7 @@ function Editar() {
                 id: "whatsapp",
                 placeHolder: "Whatsapp",
                 value : data?.whatsapp,
-                style: {
-                  padding: "8px",
-                  fontSize: "16px",
-                }
+                style: styles.input,
               })
             ]
           }),
@@ -386,10 +382,7 @@ function Editar() {
                 id: "instagram",
                 placeHolder: "Instagram",
                 value : data?.instagram,
-                style: {
-                  padding: "8px",
-                  fontSize: "16px",
-                }
+                style: styles.input,
               })
             ]
           }),
@@ -410,10 +403,7 @@ function Editar() {
                 id: "linkedin",
                 placeHolder: "LinkedIn",
                 value : data?.linkedin,
-                style: {
-                  padding: "8px",
-                  fontSize: "16px",
-                }
+                style: styles.input,
               })
             ]
           }),
@@ -434,10 +424,7 @@ function Editar() {
                 id: "facebook",
                 placeHolder: "Facebook",
                 value : data?.facebook,
-                style: {
-                  padding: "8px",
-                  fontSize: "16px",
-                }
+                style: styles.input,
               })
             ]
           }),
@@ -460,10 +447,7 @@ function Editar() {
                 id: "descricao",
                 placeHolder: "Descrição",
                 value : data?.descricao,
-                style: {
-                  padding: "8px",
-                  fontSize: "16px",
-                }
+                style: styles.input,
               })
             ]
           }),
@@ -663,6 +647,13 @@ function Login() {
       alert('Algo deu errado! Tente novamente!')
     }
   }
+
+  const styles = {
+    input: {
+      padding: "8px",
+      fontSize: "16px",
+    }
+  }
   
   return Statefull({
     key: Login,
@@ -697,10 +688,7 @@ function Login() {
                 id: "senha",
                 placeHolder: "Senha",
                 value: senha,
-                style: {
-                  padding: "8px",
-                  fontSize: "16px",
-                }
+                style: styles.input,
               })
             ]
           }),
