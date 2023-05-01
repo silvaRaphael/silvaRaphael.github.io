@@ -76,7 +76,7 @@ function HeaderHome() {
             icon: `<svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
             </svg>`,
-            text: 'Escuro',
+            text: isPortuguese() ? 'Escuro' : 'Dark',
             onPressed: () => {
               localStorage.setItem('themeMode', isLightMode() ? 'dark' : '');
               changeRoute('/');
@@ -93,7 +93,7 @@ function HeaderHome() {
             <path d="m4.22 19.78 1.42-1.42"></path>
             <path d="m18.36 5.64 1.42-1.42"></path>
             </svg>`,
-            text: 'Claro',
+            text: isPortugues() ? 'Claro' : 'Light',
             onPressed: () => {
               localStorage.setItem('themeMode', isLightMode() ? 'dark' : '');
               changeRoute('');
