@@ -93,7 +93,7 @@ function HeaderHome() {
             <path d="m4.22 19.78 1.42-1.42"></path>
             <path d="m18.36 5.64 1.42-1.42"></path>
             </svg>`,
-            text: isPortugues() ? 'Claro' : 'Light',
+            text: isPortuguese() ? 'Claro' : 'Light',
             onPressed: () => {
               localStorage.setItem('themeMode', isLightMode() ? 'dark' : '');
               changeRoute('');
