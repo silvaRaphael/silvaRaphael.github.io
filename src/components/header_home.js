@@ -16,15 +16,15 @@ function HeaderHome() {
     },
     children: [
       // logo
-      Row({
+      BreakPoints.mobile.matches ? '' : Row({
         style: {
           justifyContent: Align.start,
-          width: Rem(15),
+          width: BreakPoints.mobile.matches ? Rem(0) : BreakPoints.tablet.matches ? Rem(3) : Rem(15),
         },
         children: [
           Link({
             to: isPortuguese() ? '#Inicio' : '#Beginning',
-            child: Text('Raphael Silva', {
+            child: Text(BreakPoints.mobile.matches ? '' : BreakPoints.tablet.matches ? 'RS' : 'Raphael Silva', {
               style: {
                 fontWeight: 500,
                 color: ThemeColors().dark,
@@ -36,6 +36,10 @@ function HeaderHome() {
 
       // nav
       Row({
+        style: {
+          width: Size.fullContent,
+          alignItems: Align.center,
+        },
         children: [
           ...MENU_ITEMS.map((item, index) => {
             return Link({
@@ -47,6 +51,7 @@ function HeaderHome() {
                 style: {
                   fontWeight: 500,
                   color: ThemeColors().dark,
+                  textAlign: Align.center,
                 }
               })
             });
@@ -55,10 +60,10 @@ function HeaderHome() {
       }),
 
       // options
-      Row({
+      BreakPoints.mobile.matches ? '' : Row({
         style: {
-          width: Rem(15),
           justifyContent: Align.end,
+          width: BreakPoints.mobile.matches ? Rem(0) : BreakPoints.tablet.matches ? Rem(3) : Rem(15),
         },
         children: [
           IconTextButton({
@@ -66,7 +71,7 @@ function HeaderHome() {
             <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
             <path d="M4 22v-7"></path>
             </svg>`,
-            text: isPortuguese() ? 'English' : 'Português',
+            text: BreakPoints.tablet.matches ? '' : isPortuguese() ? 'English' : 'Português',
             onPressed: () => {
               localStorage.setItem('language', isPortuguese() ? 'en' : '');
               changeRoute('/');
@@ -76,7 +81,7 @@ function HeaderHome() {
             icon: `<svg width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
             </svg>`,
-            text: isPortuguese() ? 'Escuro' : 'Dark',
+            text: BreakPoints.tablet.matches ? '' : isPortuguese() ? 'Escuro' : 'Dark',
             onPressed: () => {
               localStorage.setItem('themeMode', isLightMode() ? 'dark' : '');
               changeRoute('/');

@@ -29,6 +29,7 @@ function WorkListItem({ title, category, description, year, onPressed }) {
   return GestureDetector({
     onClick: onPressed,
     child: Row({
+      crossAxis: BreakPoints.mobile.matches,
       className: `work`,
       style: {
         width: Size.fullContent,
@@ -44,7 +45,7 @@ function WorkListItem({ title, category, description, year, onPressed }) {
         Row({
           className: `work-title`,
           style: {
-            width: Pc(35),
+            width: BreakPoints.mobile.matches ? Pc(100) : Pc(35),
             justifyContent: Align.start,
             alignItems: Align.end,
             padding: Rem(0),
@@ -78,7 +79,7 @@ function WorkListItem({ title, category, description, year, onPressed }) {
         Text(((description.length + customTitle.length + 3) > descriptionMaxLength ? description.slice(0, descriptionMaxLength - customTitle.length) + '...' : description) + customTitle, {
           className: `work-description`,
           style: {
-            width: Pc(50),
+            width: BreakPoints.mobile.matches ? Pc(100) : Pc(50),
             textAlign: Align.start,
             color: ThemeColors().dark,
             transition: '.4s',
@@ -89,7 +90,7 @@ function WorkListItem({ title, category, description, year, onPressed }) {
         Text(year, {
           className: `work-year`,
           style: {
-            width: Pc(15),
+            width: BreakPoints.mobile.matches ? Pc(100) : Pc(15),
             textAlign: Align.end,
             color: ThemeColors().dark,
             fontSize: Rem(3),

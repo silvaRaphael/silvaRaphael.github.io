@@ -52,57 +52,73 @@ function WorksPopup({ work }) {
           Column({
             style: {
               alignItems: Align.start,
+              justifyContent: Align.spaced,
               minWidth: Rem(16),
               width: Rem(16),
             },
             children: [
-              Text(work.title, {
-                style: {
-                  color: ThemeColors().dark,
-                  fontWeight: 600,
-                  fontSize: Rem(1.5),
-                }
-              }),
-              Text(work.category, {
-                style: {
-                  color: ThemeColors().dark,
-                  fontWeight: 700,
-                  fontSize: Rem(.8),
-                  opacity: .6,
-                }
-              }),
-
-              Separator({ height: Rem(1) }),
-
-              Text(work.description, {
-                style: {
-                  color: ThemeColors().dark,
-                }
-              }),
-
-              Separator({ height: Rem(1) }),
-
-              work?.technologies ? Column({
+              Column({
                 style: {
                   alignItems: Align.start,
+                  width: Pc(100),
                 },
                 children: [
-                  Text(isPortuguese() ? 'Tecnologias utilizadas:' : 'Technologies used:', {
+                  Text(work.title, {
                     style: {
                       color: ThemeColors().dark,
                       fontWeight: 600,
+                      fontSize: Rem(1.5),
                     }
                   }),
-                  Separator({ height: Rem(.25) }),
-                  ...work?.technologies.map((item, index) => {
-                    return Text('> ' + item, {
-                      style: {
-                        color: ThemeColors().dark,
-                      }
-                    });
-                  })
+                  Text(work.category, {
+                    style: {
+                      color: ThemeColors().dark,
+                      fontWeight: 700,
+                      fontSize: Rem(.8),
+                      opacity: .6,
+                    }
+                  }),
+
+                  Separator({ height: Rem(1) }),
+
+                  Text(work.description, {
+                    style: {
+                      color: ThemeColors().dark,
+                    }
+                  }),
+
+                  Separator({ height: Rem(1) }),
+
+                  work?.technologies ? Column({
+                    style: {
+                      alignItems: Align.start,
+                    },
+                    children: [
+                      Text(isPortuguese() ? 'Tecnologias utilizadas:' : 'Technologies used:', {
+                        style: {
+                          color: ThemeColors().dark,
+                          fontWeight: 600,
+                        }
+                      }),
+                      Separator({ height: Rem(.25) }),
+                      ...work?.technologies.map((item, index) => {
+                        return Text('> ' + item, {
+                          style: {
+                            color: ThemeColors().dark,
+                          }
+                        });
+                      })
+                    ]
+                  }) : '',
                 ]
-              }) : '',
+              }),
+
+              BreakPoints.desktop.matches ? '' : Text(isPortuguese() ? 'Arraste pro lado >' : 'Drag to the side >', {
+                style: {
+                  color: ThemeColors().dark,
+                  fontWeight: 600,
+                }
+              }),
             ]
           }),
 
