@@ -324,25 +324,20 @@ function HomePage() {
 								style: {
 									position: 'absolute',
 									bottom: BreakPoints.mobile.matches ? Rem(-4) : Px(0),
-									right: BreakPoints.mobile.matches ? Rem(-1.5) : Px(0),
+									right: BreakPoints.mobile.matches ? 'unset' : Px(0),
+									left: BreakPoints.mobile.matches ? Rem(0) : 'unset',
 									paddingRight: isPortuguese() ? Rem(1.75) : Rem(.5),
 									paddingBottom: Rem(.3),
 									alignItems: Align.end,
 								},
 								children: [
 									Container({
-										style: isPortuguese() ? {
+										style: {
 											background: ThemeColors().dark,
 											height: BreakPoints.mobile.matches ? Rem(.5) : BreakPoints.tablet.matches ? Rem(.75) : Rem(1),
 											width: BreakPoints.mobile.matches ? Rem(2) : BreakPoints.tablet.matches ? Rem(3) : Rem(4.5),
-											marginRight: BreakPoints.mobile.matches ? Rem(-2) : BreakPoints.tablet.matches ? Rem(1.5) : Rem(1.7),
-											marginBottom: BreakPoints.mobile.matches ? Rem(3.825) : BreakPoints.tablet.matches ? Rem(0) : Rem(.1),
-										} : {
-											background: ThemeColors().dark,
-											height: BreakPoints.mobile.matches ? Rem(.5) : BreakPoints.tablet.matches ? Rem(.75) : Rem(1),
-											width: BreakPoints.mobile.matches ? Rem(2) : BreakPoints.tablet.matches ? Rem(3) : Rem(4.5),
-											marginRight: BreakPoints.mobile.matches ? Rem(-2) : BreakPoints.tablet.matches ? Rem(1.5) : Rem(2.5),
-											marginBottom: BreakPoints.mobile.matches ? Rem(3.825) : BreakPoints.tablet.matches ? Rem(0) : Rem(.1),
+											marginRight: BreakPoints.mobile.matches ? Rem(1) : BreakPoints.tablet.matches ? Rem(1.5) : Rem(1.7),
+											marginBottom: BreakPoints.mobile.matches ? Rem(0) : BreakPoints.tablet.matches ? Rem(0) : Rem(.1),
 										},
 										animated: {
 											type: 'opacity',
