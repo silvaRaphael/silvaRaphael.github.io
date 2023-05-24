@@ -105,7 +105,7 @@ function HomePage() {
 			year: '2021',
 			technologies: [
 				'figma',
-				'flutter',
+				'react native',
 			],
 			images: [
 				{ title: isPortuguese() ? 'Tela inicial' : 'Home screen', source: '/src/images/tasks-1.png' },
@@ -139,7 +139,7 @@ function HomePage() {
 			year: '2021',
 			technologies: [
 				'figma',
-				'flutter',
+				'react native',
 			],
 			images: [
 				{ title: isPortuguese() ? 'Tela inicial' : 'Home screen', source: '/src/images/sports-store-1.png' },
@@ -155,8 +155,7 @@ function HomePage() {
 			year: '2022',
 			technologies: [
 				'figma',
-				'firebase',
-				'flutter',
+				'react native',
 			],
 			images: [
 				{ title: isPortuguese() ? 'Tela de login' : 'Login screen', source: '/src/images/nba-1.png' },
@@ -180,7 +179,7 @@ function HomePage() {
 				'figma',
 				'firebase',
 				'javascript',
-				isPortuguese() ? 'framework próprio' : 'own framework',
+				'SPA_Frameword',
 			],
 			rows: 2,
 			images: [
@@ -228,10 +227,11 @@ function HomePage() {
 				{ title: 'node js' },
 				{ title: 'express' },
 				{ title: 'typescript' },
-				{ title: 'firebase' },
-				{ title: 'php' },
+				{ title: 'mongoDB' },
 				{ title: 'APIs' },
+				{ title: 'php' },
 				{ title: 'mysql' },
+				{ title: 'firebase' },
 			]
 		},
 		{
@@ -239,9 +239,9 @@ function HomePage() {
 			list: [
 				{ title: 'html' },
 				{ title: 'css' },
-				{ title: 'bootstrap' },
 				{ title: 'javascript' },
 				{ title: 'jQuery' },
+				{ title: 'react js' },
 			]
 		},
 		{
