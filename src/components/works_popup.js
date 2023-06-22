@@ -4,6 +4,8 @@ function WorksPopup({ work }) {
 
 	const rows = (work?.rows ?? 1);
 
+	if (!work.images) work.images = [];
+
 	return Row({
 		style: {
 			position: 'relative',
@@ -111,6 +113,28 @@ function WorksPopup({ work }) {
 											})
 										]
 									}) : '',
+
+									work?.github_link ? Link({
+										target: '_blank',
+										to: work?.github_link,
+										child: isPortuguese() ? 'Ver no GitHub' : 'See on GitHub',
+										style: {
+											color: ThemeColors().dark,
+											marginTop: Rem(1),
+											fontWeight: 600,
+										}
+									}) : '',
+
+									work?.deploy_link ? Link({
+										target: '_blank',
+										to: work?.deploy_link,
+										child: isPortuguese() ? 'Ver projeto' : 'See project',
+										style: {
+											color: ThemeColors().dark,
+											marginTop: Rem(1),
+											fontWeight: 600,
+										}
+									}) : '',
 								]
 							}),
 
@@ -126,13 +150,13 @@ function WorksPopup({ work }) {
 					Separator({ width: Rem(4) }),
 
 					Grid({
-						columns: Math.ceil(work?.images.length / rows),
+						columns: Math.ceil(work?.images?.length / rows),
 						rowGap: Rem(1),
 						style: {
 							justifyContent: Align.start,
 						},
 						children: [
-							...work?.images.map((item, index) => {
+							...work?.images?.map((item, index) => {
 								return Column({
 									style: {
 										margin: Rem(0, 1),

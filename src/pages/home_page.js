@@ -96,7 +96,7 @@ function HomePage() {
 	document.title = isPortuguese() ? 'Raphael Silva | Desenvolvedor Full-Stack' : 'Raphael Silva | Full Stack Developer';
 
 	const WORKS_LIST = [
-		{
+		/* {
 			title: isPortuguese() ? 'App de Tarefas' : 'Task Mobile App',
 			category: isPortuguese() ? 'Aplicativo' : 'Mobile app',
 			description: isPortuguese() ?
@@ -111,7 +111,7 @@ function HomePage() {
 				{ title: isPortuguese() ? 'Tela inicial' : 'Home screen', source: '/src/images/tasks-1.png' },
 				{ title: isPortuguese() ? 'Adicionar tarefa' : 'Add task ', source: '/src/images/tasks-2.png' },
 			]
-		},
+		}, */
 		{
 			title: isPortuguese() ? 'Site de Loja de Tênis' : 'Sneaker Store Website',
 			category: isPortuguese() ? 'Site' : 'Website',
@@ -181,6 +181,7 @@ function HomePage() {
 				'javascript',
 				'SPA_Frameword',
 			],
+			deploy_link: 'https://gerenciador-001.web.app',
 			rows: 2,
 			images: [
 				{ title: isPortuguese() ? 'Tela inicial' : 'Home screen', source: '/src/images/gerenciador-1.png' },
@@ -209,6 +210,7 @@ function HomePage() {
 				'themoviedb API',
 				'flutter',
 			],
+			github_link: 'https://github.com/silvaRaphael/movie-app',
 			images: [
 				{ title: isPortuguese() ? 'Tela inicial' : 'Home screen', source: '/src/images/movies-home.png' },
 				{ title: isPortuguese() ? 'Detalhes do filme/série' : 'Movie/Serie details', source: '/src/images/movies-details-1.png' },
@@ -218,20 +220,36 @@ function HomePage() {
 				{ title: isPortuguese() ? 'Tela de pesquisa' : 'Search screen', source: '/src/images/movies-search.png' },
 			]
 		},
+		{
+			title: isPortuguese() ? 'Back-end app de conversa' : 'Back end Chat App',
+			category: 'API',
+			description: isPortuguese() ?
+				`Uma API simples para envio e recebimento de mensagens em tempo real em node.js, utilizando mongoDB, socket.io, typescript e conceitos SOLID.` :
+				`A simple API for sending and receiving messages real time with node.js, using mongoDB, socket.io, tyhpescript and SOLID concepts.`,
+			year: '2023',
+			technologies: [
+				'node.js',
+				'typescript',
+				'mongoDB',
+				'socket.io',
+			],
+			github_link: 'https://github.com/silvaRaphael/node-chatapp',
+		},
 	];
 
 	const SKILLS_LIST = [
 		{
 			title: isPortuguese() ? 'back-end >' : 'back end >',
 			list: [
-				{ title: 'node js' },
-				{ title: 'express' },
-				{ title: 'typescript' },
-				{ title: 'mongoDB' },
-				{ title: 'APIs' },
-				{ title: 'php' },
-				{ title: 'mysql' },
+				{ title: 'node.js' },
 				{ title: 'firebase' },
+				{ title: 'typescript' },
+				{ title: 'PHP' },
+				{ title: 'express' },
+				{ title: 'APIs' },
+				{ title: 'mongoDB' },
+				{ title: 'jest' },
+				{ title: 'MySql' },
 			]
 		},
 		{
@@ -591,20 +609,28 @@ function HomePage() {
 																width: Size.fullContent,
 															}
 														}),
-														...item.list.map((item, index, arr) => {
+														Grid({
+															columns: (item.list.length >= Math.ceil(item.list.length / 2) && Math.ceil(item.list.length / 2) >= 5) ? 2 : 1,
+															style: {
+																gridAutoFlow: 'revert-layer'
+															},
+															children: [
+																...item.list.map((item, index, arr) => {
 
-															const divisions = arr.length;
-															const spaces = Math.floor(100 / divisions);
+																	const divisions = arr.length;
+																	const spaces = Math.floor(100 / divisions);
 
-															return Text('> ' + item.title, {
-																style: {
-																	color: ThemeColors().dark,
-																	fontWeight: 500,
-																	textAlign: Align.end,
-																	width: Size.fullContent,
-																	margin: Rem(.5),
-																}
-															});
+																	return Text(item.title ? ('> ' + item.title) : '', {
+																		style: {
+																			color: ThemeColors().dark,
+																			fontWeight: 500,
+																			textAlign: Align.end,
+																			width: Size.fullContent,
+																			margin: Rem(.5),
+																		}
+																	});
+																})
+															]
 														})
 													]
 												}),
