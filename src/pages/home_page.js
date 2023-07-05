@@ -413,7 +413,7 @@ function HomePage() {
               ◽ Comecei no back-end com PHP, e atualmente tenho estudado e criado aplicações com Node js utilizando minha experiência
               em javascript, mas sempre me atualizando e melhorando.
               <br>
-              ◽ No desenvolvimento mobile tenho utilizado Flutter, e desenvolvido algumas aplicações simples porém muito interessantes.`, {
+              ◽ No desenvolvimento mobile tenho utilizado Flutter, e desenvolvido algumas aplicações muito interessantes.`, {
 								style: {
 									color: ThemeColors().dark,
 								}
@@ -422,7 +422,7 @@ function HomePage() {
                 <br>
                 ◽ I started on back end with PHP, and currently I've been studing and creating applications with Node js using my experience in javascript, but always updating and improving.
                 <br>
-                ◽ In mobile development I've been using Flutter, and developed some simple but very interesting applications.`, {
+                ◽ In mobile development I've been using Flutter, and developed some very interesting applications.`, {
 									style: {
 										color: ThemeColors().dark,
 									}
