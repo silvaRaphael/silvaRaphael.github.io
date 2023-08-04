@@ -118,7 +118,7 @@ function HomePage() {
 			description: isPortuguese() ?
 				`Só uma página básica em html, css e js, de uma loja de tênis, com algumas funcionalidades js e um design moderno.` :
 				`Just a basic html, css and js website page, of a sneaker store, with some js functionalities and modern design.`,
-			year: '2021',
+			year: '2020',
 			technologies: [
 				'figma',
 				'html',
@@ -136,7 +136,7 @@ function HomePage() {
 			description: isPortuguese() ?
 				`Um projeto de app de loja simples` :
 				`A simple store mobile app project`,
-			year: '2021',
+			year: '2020',
 			technologies: [
 				'figma',
 				'react native',
@@ -152,7 +152,7 @@ function HomePage() {
 			description: isPortuguese() ?
 				`App de loja com produtos da NBA com autenticação e armazenamento de dados.` :
 				`Store mobile app with NBA products with authentication and data storage`,
-			year: '2022',
+			year: '2021',
 			technologies: [
 				'figma',
 				'react native',
@@ -179,7 +179,7 @@ function HomePage() {
 				'figma',
 				'firebase',
 				'javascript',
-				'SPA_Frameword',
+				'SPA_Framework',
 			],
 			deploy_link: 'https://gerenciador-001.web.app',
 			rows: 2,
@@ -204,7 +204,7 @@ function HomePage() {
 				`Movies and series catalog app that uses themoviedb API, it allows the user to save to favorites, search by name 
       or category and see the most recent movies and series released, it shows where you can find the movie or serie, on 
       stream, for rent or buy.`,
-			year: '22/23',
+			year: '2022',
 			technologies: [
 				'figma',
 				'themoviedb API',
