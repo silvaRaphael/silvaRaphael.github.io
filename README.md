@@ -19,7 +19,7 @@
   </p>
 </p>
 
-## Stacks
+<h2>Stacks</h2>
 
 <a>
 	<img src="https://github.com/get-icon/geticon/raw/master/icons/nodejs-icon.svg" alt="Node.js" width="40px" height="40px">
