@@ -96,22 +96,6 @@ function HomePage() {
 	document.title = isPortuguese() ? 'Raphael Silva | Desenvolvedor Full-Stack' : 'Raphael Silva | Full Stack Developer';
 
 	const WORKS_LIST = [
-		/* {
-			title: isPortuguese() ? 'App de Tarefas' : 'Task Mobile App',
-			category: isPortuguese() ? 'Aplicativo' : 'Mobile app',
-			description: isPortuguese() ?
-				`Esse app de tarefas é uma ferramenta para ajudar o usuário a gerenciar suas tarefas diárias e aumentar sua produtividade.` :
-				`This task app is a user-friendly tool to help you manage your daily tasks and increase productivity.`,
-			year: '2021',
-			technologies: [
-				'figma',
-				'react native',
-			],
-			images: [
-				{ title: isPortuguese() ? 'Tela inicial' : 'Home screen', source: '/src/images/tasks-1.png' },
-				{ title: isPortuguese() ? 'Adicionar tarefa' : 'Add task ', source: '/src/images/tasks-2.png' },
-			]
-		}, */
 		{
 			title: isPortuguese() ? 'Site de Loja de Tênis' : 'Sneaker Store Website',
 			category: isPortuguese() ? 'Site' : 'Website',
@@ -234,6 +218,25 @@ function HomePage() {
 				'socket.io',
 			],
 			github_link: 'https://github.com/silvaRaphael/node-chatapp',
+		},
+		{
+			title: isPortuguese() ? 'App de Agenda e Contas' : 'Schedule and Bills App',
+			category: isPortuguese() ? 'Aplicativo' : 'Mobile app',
+			description: isPortuguese() ?
+				`Aplicativo para gerenciar e organizar seus compromisos, contas e cobranças` :
+				`App to manage and organize your appointments, bills and collections`,
+			year: '2023',
+			technologies: [
+				'figma',
+				'flutter',
+			],
+			github_link: 'https://github.com/silvaRaphael/agenda-app',
+			images: [
+				{ title: isPortuguese() ? 'Tela inicial' : 'Home screen', source: '/src/images/home-agenda-transparent.png' },
+				{ title: isPortuguese() ? 'Editar agenda' : 'Edit schedule', source: '/src/images/edit-agenda-transparent.png' },
+				{ title: isPortuguese() ? 'Agenda' : 'Schedule', source: '/src/images/calendar-agenda-transparent.png' },
+				{ title: isPortuguese() ? 'Telas de Contas' : 'Bills screen', source: '/src/images/bills-agenda-transparent.png' },
+			]
 		},
 	];
 
@@ -410,8 +413,8 @@ function HomePage() {
 						children: [
 							isPortuguese() ? Text(`Sou um programador full-stack, sempre focado na busca pela melhoria e pelo aprendizado.
               <br>
-              ◽ Comecei no back-end com PHP, e atualmente tenho estudado e criado aplicações com Node js utilizando minha experiência
-              em javascript, mas sempre me atualizando e melhorando.
+              ◽ Comecei no back-end com PHP, e atualmente atuo também com Node.js utilizando minha experiência e conhecimentos
+              em javascript do front-end para o back-end, mas sempre me atualizando e me desenvolvendo.
               <br>
               ◽ No desenvolvimento mobile tenho utilizado Flutter, e desenvolvido algumas aplicações muito interessantes.`, {
 								style: {
@@ -420,7 +423,7 @@ function HomePage() {
 							}) :
 								Text(`I'm a full stack programmer, always focused on improving and learning.
                 <br>
-                ◽ I started on back end with PHP, and currently I've been studing and creating applications with Node js using my experience in javascript, but always updating and improving.
+                ◽ I started on back end with PHP, and currently I've been also working with Node.js using my experience and knowledges in javascript, from the front end to back end, but always updating and improving myself.
                 <br>
                 ◽ In mobile development I've been using Flutter, and developed some very interesting applications.`, {
 									style: {
@@ -428,7 +431,6 @@ function HomePage() {
 									}
 								}),
 							Separator({ height: Rem(2) }),
-							// call button
 							TextIconButtonBg({
 								link: 'mailto:raphaeltiago02@gmail.com?subject=' + encodeURI('Olá Raphael! Vim por seu portfólio.'),
 								text: isPortuguese() ? 'Fale Comigo' : 'Talk to Me',

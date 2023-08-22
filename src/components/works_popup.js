@@ -70,6 +70,8 @@ function WorksPopup({ work }) {
 											color: ThemeColors().dark,
 											fontWeight: 600,
 											fontSize: Rem(1.5),
+											lineHeight: Rem(1.5),
+											marginBottom: Rem(.5),
 										}
 									}),
 									Text(work.category, {
