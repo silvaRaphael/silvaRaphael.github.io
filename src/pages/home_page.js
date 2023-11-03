@@ -90,6 +90,26 @@ function HomePage() {
 			],
 		},
 		{
+			title: "SPA Framework",
+			category: isPortuguese() ? "Biblioteca JS" : "JS Library",
+			description: isPortuguese()
+				? `É uma biblioteca javascript para criar SPAs.`
+				: `It is a javascript library for creating SPAs.`,
+			year: "2021",
+			technologies: ["html", "css", "javascript"],
+			github_link: "https://github.com/silvaRaphael/SPA_Framework",
+			images: [
+				{
+					title: isPortuguese() ? "Tela inicial" : "Home screen",
+					source: "/src/images/home-spa-framework.png",
+				},
+				{
+					title: isPortuguese() ? "Página não encontrada" : "Page not found",
+					source: "/src/images/error-spa-framework.png",
+				},
+			],
+		},
+		{
 			title: isPortuguese() ? "Gerenciador de Tarefas" : "Task Manager",
 			category: "Web App",
 			description: isPortuguese()
